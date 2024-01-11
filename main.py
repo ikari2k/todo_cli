@@ -1,5 +1,5 @@
 user_prompt = "Type add or show or edit or exit: "
-todos = []
+todos = ['sample','another sample']
 
 while True:
     user_action = input(user_prompt)
@@ -9,8 +9,9 @@ while True:
             todo = input('Enter todo: ')
             todos.append(todo)
         case 'show' | 'display':
-            for item in todos:
-                print(item)
+            for index, item in enumerate(todos):
+                row = f"{index}.{item}"
+                print(row)
         case 'edit':
             number = int(input("Number of the todo to edit: "))
             number = number - 1
