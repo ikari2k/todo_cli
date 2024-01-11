@@ -1,13 +1,18 @@
 user_prompt = "Type add or show or edit or complete or exit: "
-todos = ['sample','another sample']
 
 while True:
     user_action = input(user_prompt)
     user_action = user_action.strip()
     match user_action:
         case 'add':
-            todo = input('Enter todo: ')
+            todo = input('Enter todo: ') + "\n"
+            file = open('todos.txt', 'r')
+            todos = file.readlines()
+            file.close()
             todos.append(todo)
+            file = open('todos.txt', 'w')
+            file.writelines(todos)
+            file.close()
         case 'show' | 'display':
             for index, item in enumerate(list(todos)):
                 row = f"{index + 1}.{item}"
