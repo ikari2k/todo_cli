@@ -50,7 +50,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-
+qodana.yaml
 # Translations
 *.mo
 *.pot
@@ -158,3 +158,12 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/vcs.xml
+.idea/todo_cli.iml
+.idea/modules.xml
+.idea/misc.xml
+.DS_Store
+/shelf/
+/workspace.xml
+.idea/workspace.xml

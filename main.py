@@ -21,6 +21,4 @@ while True:
         case _:
             print('Unknown command!')
 
-print('Bye!')    
-    
-
+print('Bye!')
