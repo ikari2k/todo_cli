@@ -9,6 +9,7 @@ while True:
             file = open('todos.txt', 'r')
             todos = file.readlines()
             file.close()
+
             todos.append(todo)
             file = open('todos.txt', 'w')
             file.writelines(todos)
@@ -17,8 +18,13 @@ while True:
             file = open('todos.txt', 'r')
             todos = file.readlines()
             file.close()
-            
-            for index, item in enumerate(list(todos)):
+
+            new_todos = []
+            for item in todos:
+                new_item = item.strip('\n')
+                new_todos.append(new_item)
+
+            for index, item in enumerate(new_todos):
                 row = f"{index + 1}.{item}"
                 print(row)
         case 'edit':
