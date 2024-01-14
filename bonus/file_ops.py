@@ -10,9 +10,8 @@ list = [{'Name':'Mateusz, 'Email': 'mateusz@gmaiil.com', 'City': 'Krakow'},
         {'Name':'Paweł, 'Email': 'pawel@gmail.com', 'City': 'Tarnow'}]
 
 '''
-
 list = []
-with open('my_list.txt', 'r') as file:
+with open('bonus/my_list.txt', 'r') as file:
     
     #first line will put into a list as dictionary keys
     #['Name', 'Email', 'City']
@@ -35,5 +34,5 @@ with open('my_list.txt', 'r') as file:
         zipped = ()
         zipped = zip(dictionary_keys,item)
         list.append(dict(zipped))
-
+print(list)
     
