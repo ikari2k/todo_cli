@@ -21,3 +21,14 @@ with open('bonus/example.json', 'r') as file:
 
     for key, value in data.items():
         print(key, ': ',value)
+
+def validateJSON(jsonStr):
+    try:
+        json.loads(jsonStr)
+    except ValueError as err:
+        return False
+    return True
+
+JsonString = """{"name": "Raji", "salary": 25000, "email": "raji@mymail.com",}"""
+
+print(validateJSON(JsonString) == False)
