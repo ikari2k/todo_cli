@@ -1,4 +1,8 @@
 import functions
+import time
+
+now = time.strftime('%b %d, %Y %H:%M:%S')
+print('It is ', now)
 
 user_prompt = "Type add or show or edit or complete or exit: "
 
