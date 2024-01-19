@@ -33,7 +33,7 @@ while True:
             todos[index] = new_todo
             functions.write_todos(todos)
             window['todos'].update(values=todos)
-        case 'todos': #when user is selecting item from the list
+        case "todos": #when user is selecting item from the list
             window['todo'].update(value = values['todos'][0])
         case sg.WIN_CLOSED:
             break
