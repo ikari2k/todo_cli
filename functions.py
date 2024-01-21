@@ -1,4 +1,8 @@
+import os 
 FILEPATH = 'todos.txt'
+if not os.path.exists(FILEPATH):
+    with open(FILEPATH, "w") as file:
+        pass
 
 def get_todos(filepath=FILEPATH):
     with open(filepath, 'r') as file_local:
